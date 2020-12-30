@@ -11,23 +11,24 @@ int main(){
     pb = b;
     int lengthA = sizeof(a)/sizeof(int);
     int lengthB = sizeof(b)/sizeof(int);
-    //1. 쉽게 생각한 방법
-    //    for(int i=0;i<lengthA;i++){
-    //        b[i]=a[i];
-    //    }
-    //    printf("int b[] = {");
-    //    for(int i=0;i<lengthB;i++){
-    //        if(i!=lengthB-1){
-    //            printf("%d, ",b[i]);
-    //        }else{
-    //            printf("%d", b[i]);
-    //        }
-    //
-    //    }
-    //    printf("}\n");
     
+    printf("1. 쉽게 생각한 방법\n");
+        for(int i=0;i<lengthA;i++){
+            b[i]=a[i];
+        }
+        printf("int b[] = {");
+        for(int i=0;i<lengthB;i++){
+            if(i!=lengthB-1){
+                printf("%d, ",b[i]);
+            }else{
+                printf("%d", b[i]);
+            }
     
-    //포인터 방법1) 포인터로 배열과 같이 첨자를 이용하여 배열의 원소를 참조할 수 있다.
+        }
+        printf("}\n\n");
+    
+    printf("--------------------------------------------------\n");
+    printf("2. 포인터를 이용한 방법 1 (포인터를 배열처럼 첨자를 이용하는 방법)\n");
     for(int i=0;i<lengthA;i++){
         pb[i]=pa[i];
     }
@@ -38,11 +39,13 @@ int main(){
         }else{
             printf("%d", b[i]);
         }
-        
+
     }
-    printf("}\n");
+    printf("}\n\n");
     
-    //포인터 방법2) 간접참조 이용
+    printf("--------------------------------------------------\n");
+    printf("3. 포인터를 이용한 방법 2 (포인터를 *를 이용하여 간접참조하는 방법)\n");
+    
     for(int i=0;i<lengthA;i++){
         *(pb+i) = *(pa+i);
     }
@@ -56,7 +59,11 @@ int main(){
         }
         
     }
-    printf("}\n");
+    printf("}\n\n");
+    
+    
+    
+    
     return 0;
     
     
