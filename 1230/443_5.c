@@ -5,12 +5,15 @@ int main(){
     
     int a[] = {4, 7, 9, 3, 6};
     int b[] = {10, 20, 30, 40, 50, 60};
+    
+    int lengthA = sizeof(a)/sizeof(int);
+    int lengthB = sizeof(b)/sizeof(int);
+    
+    //포인터를 이용할 경우 필요한 부분
     int *pa = NULL;
     pa = a;
     int *pb = NULL;
     pb = b;
-    int lengthA = sizeof(a)/sizeof(int);
-    int lengthB = sizeof(b)/sizeof(int);
     
     printf("1. 쉽게 생각한 방법\n");
         for(int i=0;i<lengthA;i++){
