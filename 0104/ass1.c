@@ -13,7 +13,7 @@ void findMinIndex(int ary[][5], int row, int col);
 int main(void) {
     int ary[20] = {0};
     int ary2[4][5] ={0,};
-    srand((long)time(NULL));
+    srand((long)time(NULL)); // 난수에 시드를 지정하기 위해 srand를 이용한다. 
     
     
     //1) 50 ~ 99 사이의 값을 20개 만들기 --> 1차원 배열에 값 넣기
